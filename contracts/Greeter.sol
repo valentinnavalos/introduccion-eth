@@ -1,4 +1,6 @@
-//SPDX-License-Identifier: Unlicense
+//SPDX-License-Identifier: Unlicense 
+//---> la licencia que tiene este codigo, que se puede y que no se puede hacer con este codigo
+
 // solidity version that was used to generate this file
 pragma solidity ^0.8.0; //--> "cualquier versión mayor o igual a 0.8.0 messirve"
 //              >SemVer --> Semantic Versioning
@@ -9,7 +11,7 @@ contract Greeter {
     string private greeting; //--> estado de memoria persistente.
 
     // código que se ejecuta al momento de hacer el deployment.--> subir el contrato a la blockchain.
-    // luego del success deploy, se dropea el constructor, se borra.
+    // luego del success deploy --> se dropea el constructor, se borra.
     constructor(string memory _greeting) {
         greeting = _greeting;//--> defino el valor de greeting.
     }

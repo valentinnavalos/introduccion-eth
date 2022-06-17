@@ -12,14 +12,20 @@ async function main() {
   // If this script is run directly using `node` you may want to call compile
   // manually to make sure everything is compiled
   // await hre.run('compile');
+  const [signer] = await hre.ethers.getSigners();
+  // signer es una cta de eth para deployar.
 
   // We get the contract to deploy
-  const Greeter = await hre.ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
+  const Ownable = await hre.ethers.getContractFactory("Ownable");
+  const ownable = await Ownable.deploy(signer.address);
+  // dentro de .deploy() van los parametros que requiere el constructor.
 
-  await greeter.deployed();
+  await ownable.deployed();
+  // esperamos a que la tx sea procesada por la blockchain.
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("Ownable deployed to:", ownable.address);
+  const foo = await ownable.owner();
+  console.log("Este es el owner: ", foo);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

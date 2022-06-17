@@ -9,6 +9,9 @@ contract Ownable {
     // modifier: es una función que se ejecuta antes de que se ejecute la función que se le pasa como parámetro.
     modifier onlyOwner {
         require(msg.sender == owner);
+        // acá estamos seteando que se llame a transferOwnership() solo si msg.sender es 'owner'.
+        // "requiero que el msg.sender sea owner."
+
         _;
     }
     // --> es una fn modificadora.

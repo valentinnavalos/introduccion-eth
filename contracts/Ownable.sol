@@ -12,7 +12,12 @@ contract Ownable {
         // acá estamos seteando que se llame a transferOwnership() solo si msg.sender es 'owner'.
         // "requiero que el msg.sender sea owner."
 
+        // require --> es una fn que toma un bool.
+        // si el bool es false, se rompe el programa y revierte.
+        // si el bool es true,  continua.
+
         _;
+        // _ --> es una variable que se usa para que se ejecute la función que se le pasa como parámetro.
     }
     // --> es una fn modificadora.
     // los modifiers pueden ser de visiblidad, pueden ser custom

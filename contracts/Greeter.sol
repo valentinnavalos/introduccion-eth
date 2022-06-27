@@ -6,6 +6,7 @@ pragma solidity ^0.8.0; //--> "cualquier versión mayor o igual a 0.8.0 messirve
 //              >SemVer --> Semantic Versioning
 
 // cada 'contract' es un contrato, hence podemos tener 70 en un mismo archivo. y van a hacer todos distintos.
+// pero las buenas practicas son un 'contract' por archivo .sol
 contract Greeter {
     // atributos del contrato. Sus variables.
     string private greeting; //--> estado de memoria persistente.

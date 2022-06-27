@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 contract Ownable {
     // address es un tipo de dato nativo y simple (no complejo) de solidity.
     address public owner;
-    // public, cualquier persona puede venir y preguntar quien es el dueño.
+    // public --> cualquier persona puede venir y preguntar quien es el dueño.
 
     // modifier: es una función que se ejecuta antes de que se ejecute la función que se le pasa como parámetro.
     modifier onlyOwner {
@@ -20,10 +20,10 @@ contract Ownable {
         // _ --> es una variable que se usa para que se ejecute la función que se le pasa como parámetro.
     }
     // --> es una fn modificadora.
-    // los modifiers pueden ser de visiblidad, pueden ser custom
+    // los modifiers pueden ser de visiblidad, pueden ser custom.
 
     constructor(address _owner) {
-        //..-> los constructores no requieren visibilidad.
+        //--> los constructores no requieren visibilidad.
         owner = _owner;
         // al deployar el contrato, le voy a pasar al constructor la address que quiero que sea el dueño.
     }
